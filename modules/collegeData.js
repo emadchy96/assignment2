@@ -43,4 +43,15 @@ function initialize() {
     });
 }
 
+function getAllStudents() {
+    return new Promise((resolve, reject) => {
+        if (dataCollection.students.length > 0) {
+            resolve(dataCollection.students);
+        } else {
+            reject("no results returned");
+        }
+    });
+}
+
+
 
