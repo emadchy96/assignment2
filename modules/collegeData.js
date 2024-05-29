@@ -53,5 +53,16 @@ function getAllStudents() {
     });
 }
 
+function getTAs() {
+    return new Promise((resolve, reject) => {
+        const TAs = dataCollection.students.filter(student => student.TA);
+        if (TAs.length > 0) {
+            resolve(TAs);
+        } else {
+            reject("no results returned");
+        }
+    });
+}
+
 
 
