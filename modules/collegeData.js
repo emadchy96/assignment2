@@ -64,5 +64,18 @@ function getTAs() {
     });
 }
 
+function getCourses() {
+    return new Promise((resolve, reject) => {
+        if (dataCollection.courses.length > 0) {
+            resolve(dataCollection.courses);
+        } else {
+            reject("no results returned");
+        }
+    });
+}
+
+module.exports = { initialize, getAllStudents, getTAs, getCourses };
+
+
 
 
